@@ -156,6 +156,10 @@ def work_score(request, uuid, title=None):
 
 
 def lyric_alignment(request, uuid, title=None):
+    '''
+    A tool to visualize the lyrics aligned to the audio 
+    and the spectrogram derived by inversing the mfcc timbral features
+    '''
     recording = get_object_or_404(models.Recording, mbid=uuid)
     mbid = recording.mbid
 
